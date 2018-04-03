@@ -2,6 +2,7 @@ import numpy as np
 from verifyKT1 import verify_kt1
 from random import shuffle
 
+
 class KeyGen:
     def get_V5(self):
         V5 = [1, 2, 3, 6, 7, 10, 11, 13, 14, 15, 17, 18, 19, 22, 23, 26, 27, 30, 31, 34, 35]
@@ -23,8 +24,8 @@ class KeyGen:
             V2.insert(V2.index(l1) + 1, 5)
             V2.insert(V2.index(l2) + 1, 6)
         else:
-            V2.insert(V2.index(l2), 6)
-            V2.insert(V2.index(l1), 5)
+            V2.insert(V2.index(l2) + 1, 6)
+            V2.insert(V2.index(l1) + 1, 5)
 
         D = np.zeros(9)
         for i in range(0, 8):
