@@ -9,7 +9,7 @@ class KeyGen:
         return V5
 
     def construct_D(self):
-        if np.random.randint(0, 1):
+        if np.random.randint(0, 2):
             l2 = np.random.choice([5, 7, 8])
             l1 = np.random.choice([2, 3, 4])
         else:
