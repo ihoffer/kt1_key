@@ -1,7 +1,6 @@
 import numpy as np
 from verifyKT1 import verify_kt1
 from random import shuffle
-import time
 
 class KeyGen:
     def get_V5(self):
@@ -111,11 +110,3 @@ class KeyGen:
             D, P, alpha = self.gen_key()
             if verify_kt1(D.tolist(), P.tolist(), alpha):
                 return D, P, alpha
-
-
-if __name__ == '__main__':
-    keygen = KeyGen()
-    t = time.time()
-    for i in range(100000):
-        keygen.gen_valid_key()
-    print(time.time() - t)
