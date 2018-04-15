@@ -13,7 +13,3 @@ def j_from_D(D):
     if max(j) != 9 or min(j) != 2 or len(set(j)) != 8:
         raise RuntimeError('Cannot compute j')
     return j
-
-
-test = [0,12,28,4,24,8,16,36,20]
-print(j_from_D(test))
